@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000;
+  background: url("img/backgroundPC.png") center / cover no-repeat fixed;
+}
+
+main {
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  text-align: center;
+}
+
+.perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.perfil img {
+  width: 68px;
+  height: 68px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+}
+
+.menu {
+  width: 100%;
+  max-width: 330px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.botao,
+.card {
+  display: block;
+  padding: 6px 16px;
+  color: #000;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+}
+
+.botao:hover,
+.card:hover {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: #000;
+}
+
+.redes {
+  display: flex;
+  gap: 8px;
+}
+
+.redes a {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 18px;
+  border-radius: 50%;
+}
+
+.redes a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.sobre {
+  max-width: 470px;
+}
+
+.sobre p + p {
+  margin-top: 12px;
+}
+
+.projeto {
+  width: 100%;
+  max-width: 520px;
+  padding: 14px;
+  text-align: left;
+}
+
+.projeto .imagem {
+  height: 240px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+  background: linear-gradient(135deg, #2b1f55, #a56fdc);
+  border-radius: 4px;
+}
+
+.projeto .botao {
+  text-align: center;
+}
+
+.certificados {
+  width: 100%;
+  max-width: 720px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.certificados .card {
+  padding: 14px;
+  text-align: left;
+}
+
+.certificados span {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+@media (max-width: 640px) {
+  body {
+    background-image: url("img/backgroundMOBILE.png");
+    background-attachment: scroll;
+  }
+
+  .certificados {
+    grid-template-columns: 1fr;
+  }
+
+  .projeto .imagem {
+    height: 180px;
+  }
+}
